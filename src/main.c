@@ -2,6 +2,7 @@
 #include "MKL26Z4.h"
 #include "systick.h"
 #include "delay.h"
+#include "console.h"
 #include <string.h> //memset
 
 static void main_init_io(void)
@@ -42,6 +43,9 @@ int main(void) {
     while(1){
         // led task
         main_led();
+
+        // console
+        console();
     }
 
     return 0;
